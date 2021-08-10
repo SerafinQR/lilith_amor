@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programa para evitar ser rechazado</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+		background: linear-gradient(100deg,#f0bed4, #a163f5);
+		
+    }
+    .contenedor {
+        margin: auto;
+        width: 900px;
+        margin-top: 300px;
+        text-align: center;
+		
+		
+    }
+    .titulo{
+       
+		text-emphasis: center;
+    }
+    .opciones p {
+        background: black;
+        display: initial;
+        padding: 5px;
+        color: #ffffff;
+        border-radius: 100px;
+        font-weight: bold;
+		margin: auto;
+    }
+    p.p1 {
+        position: relative;
+    /*    top: 350px;
+        left: 300px;
+        width: 100px;*/
+		text-align: center;
+    }
+    p.p2{
+        position: relative;
+      /*  top: 350px;
+        left: 350px;
+        width: 100px;*/
+		text-align: center;
+    }
+    #si {
+        background: #090606;
+        left: 420px;position: absolute;
+        top: 122px;
+        width: 550px;
+        color: #ffffff;
+        padding: 50px;
+        display: none;
+    }
+	footer{
+		
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".p1").hover(function(){
+      arriba =  Math.random() * (250 - 1) + 1;
+      abajo =  Math.random() * (250- 1) + 1;
+    $(this).css("top", arriba);
+    $(this).css("left", abajo);	
+    });
+});
+function dijoSi(){
+    document.getElementById("si").style.display = "block";
+}
+</script>
+<body>
+<div class="contenedor">
+    <div class="titulo">
+        <h1>¿QUIERES SER MI NOVIA?</h1>
+    </div>
+    <div class="opciones">
+        <p class="p1">NO</p>
+        <p onclick="dijoSi()" class="p2">SI</p>
+        <div id="si">    
+                <img src="imagenes/img2.jpg" width="30%">
+			<h1>¡¡¡Gracias chiquistriquis sabia que querias ser mi novia!!!</h1>
+        </div>
+    </div>
+</div>
+	
+	<footer><a href="index.html"> Siguiente</a></footer>
+</body>
+</html>
